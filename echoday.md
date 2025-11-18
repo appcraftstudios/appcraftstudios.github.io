@@ -1,61 +1,63 @@
-# Privacy Policy - WodTimer
+# Privacy Policy - EchoDay
 
 ## 1. Our Commitment to Your Privacy
 
-Welcome to WodTimer. This Privacy Policy has been created to provide you with a clear and comprehensive understanding of how we handle your information.
+Welcome to EchoDay. This Privacy Policy has been created to provide you with a clear and comprehensive understanding of how we handle your information.
 
-Our guiding principle is that **your data is yours**. WodTimer is fundamentally designed as a privacy-first application. We have architected our service so that we do not have access to your personal information. All data processing, including timer configurations, workout history, and preferences, is performed exclusively on your device. We operate with **zero servers and zero tracking**.
+Our guiding principle is that **your data is yours**. EchoDay is fundamentally designed as a privacy-first application. We have architected our service so that we do not have access to your personal information. All data processing, especially the AI-powered analysis of your schedule, is performed exclusively on your device. We operate with **zero servers and zero tracking**.
 
 ## 2. Information We Access (With Your Permission)
 
-To provide its features, WodTimer requests your permission to access the following information on your device. This access is strictly for the purposes described below, and this data is never transmitted to us or any third party.
+To provide its features, EchoDay requests your permission to access the following information on your device. This access is strictly for the purposes described below, and this data is never transmitted to us or any third party.
 
-- **HealthKit Data (Optional):** If you choose to enable HealthKit integration, we request permission to write workout data to your Health app. This allows the app to log your completed workouts for your personal fitness tracking.
-- **Notifications:** We request permission to send local notifications to alert you about timer phases, round completions, and workout transitions.
+- **Calendar Data:** We request permission to access your calendar ("This app needs to read your calendar to display your upcoming events"). This allows the app to display your schedule and provide it as context to the on-device AI.
+- **Reminders Data:** We request permission to access your reminders ("This app needs to read your reminders to display and summarise your tasks for the day"). This is used to give a complete overview of your daily commitments to you and the on-device AI.
 
 ## 3. Information We DO NOT Collect
 
-WodTimer does **not** collect, store, transmit, or have access to any of the following data:
+EchoDay does **not** collect, store, transmit, or have access to any of the following data:
 
 - **Personal Identifiers:** Your name, email address, location, or any other personally identifiable information.
-- **Workout Data:** Any details about your workouts, including timer configurations, workout history, favorites, or personal records.
-- **Device Usage:** We do not track which timer modes you use, how long you train, or any other usage patterns.
+- **Calendar and Reminder Content:** Any details from your events or reminders, including titles, descriptions, locations, attendees, or notes.
+- **AI-Generated Content:** Any summaries, insights, or chat conversations created by the AI models. These are stored locally on your device and are encrypted.
 - **Analytics and Usage Data:** The app contains no third-party or proprietary analytics trackers. We do not monitor how you use the app.
 
 ## 4. How Your Data is Processed On-Device
 
-The core functionality of WodTimer relies on processing your data securely and locally on your device.
+The core functionality of EchoDay relies on processing your data securely and locally on your device.
 
-- **Local Storage:** All timer presets, favorites, workout history, and preferences are stored exclusively on your device using standard iOS secure storage mechanisms.
-- **Apple Watch Sync:** When you use WodTimer with your Apple Watch, timer data is synchronized between your devices using Apple's WatchConnectivity framework. This communication happens directly between your paired devices and does not pass through our servers.
-- **iCloud Sync (If Enabled):** If you enable iCloud sync in your iOS settings, your timer configurations and preferences may be synchronized across your Apple devices using your personal iCloud account. This is handled entirely by Apple's iCloud infrastructure, and we do not have access to this data.
+- **Local AI Models:** EchoDay utilizes advanced AI models from Apple, Meta, Google, and Microsoft, which are downloaded and executed directly on your device. Your calendar and reminder data are fed into these models locally to generate summaries and power the chat feature. At no point does this information leave your device for processing.
+- **Contextual Chat:** When you interact with the chat feature, the app uses the event and reminder data for the selected day as context for the AI model to provide relevant answers. This entire process is self-contained within the app on your device.
 
 ## 5. Data Security Measures
 
-We employ robust security measures to protect the data stored by WodTimer on your device.
+We employ robust security measures to protect the data stored by EchoDay on your device.
 
-- **Secure Storage:** All app data is stored using iOS's secure app sandbox, which prevents other apps from accessing your WodTimer data.
-- **No External Transmission:** Your workout data never leaves your device except through Apple's secure iCloud sync (if you have enabled it in your device settings).
+- **Encryption at Rest:** All chat histories and "liked" summaries are encrypted using the **AES-GCM** (Advanced Encryption Standard) algorithm before being saved to your device's local storage.
+- **Secure Key Management:** The cryptographic key used for this encryption is generated on your device and stored securely in the **iOS Keychain**. The Keychain is a hardware-backed secure enclave, meaning the key is protected by your device's passcode and cannot be accessed by other apps or extracted from the device.
 
 ## 6. Third-Party Integrations
 
-WodTimer uses third-party services to enable certain features. Our integration with these services is designed to maintain your privacy.
+EchoDay uses third-party services to enable certain features. Our integration with these services is designed to maintain your privacy.
 
-- **Apple App Store:** If you choose to subscribe to WodTimer Premium, all transactions are processed securely by Apple's in-app purchase system. We do not collect or have access to your payment information.
-- **Google Mobile Ads (iOS only):** The free version of WodTimer displays advertisements provided by Google AdMob. Google may collect certain information to serve personalized ads according to their privacy policy. You can review Google's privacy practices at https://policies.google.com/privacy. Premium subscribers do not see advertisements.
+- **Google Calendar:** You have the option to connect your Google Calendar. To do this, we use the official Google Sign-In SDK for authentication. We only request read-only permission for your calendar events. The event data fetched is processed on-device in the same manner as your local Apple Calendar data. We do not see or store your Google account credentials.
+- **Apple App Store:** If you choose to subscribe to EchoDay Premium, all transactions are processed securely by Apple's in-app purchase system. We do not collect or have access to your payment information.
 
 ## 7. Data Retention
 
-As we do not collect your personal data on our servers, we do not have a data retention policy for such data. All data generated by the app, such as timer configurations and workout history, is stored on your device until you either delete it from within the app or uninstall the app.
+As we do not collect your personal data on our servers, we do not have a data retention policy for such data. All data generated by the app, such as chat history, is stored on your device until you either delete it from within the app or uninstall the app.
 
 ## 8. Your Privacy Rights and Controls
 
-You are in full control of your data when using WodTimer.
+You are in full control of your data when using EchoDay.
 
-- **Permission Control:** You can grant or revoke access to notifications and HealthKit at any time through the iOS Settings app.
-- **Data Deletion:** You can clear your timer favorites and reset preferences within the app's settings. Deleting the app from your device will remove all of its locally stored data.
-- **Ad Preferences:** You can control personalized advertising through your iOS settings under Privacy > Tracking.
+- **Permission Control:** You can grant or revoke access to your calendar and reminders at any time through the iOS Settings app.
+- **Data Deletion:** You can clear your "liked" summaries within the app's settings. Deleting the app from your device will remove all of its locally stored data, including chat history.
 
 ## 9. Changes to This Privacy Policy
 
 We may update this Privacy Policy to reflect changes in our practices or for other operational, legal, or regulatory reasons. If we make material changes, we will notify you by updating the date at the top of this policy and providing a notice within the app.
+
+## 10. Contact Us
+
+If you have any questions or concerns about our Privacy Policy or data practices, please contact us through the "Send Feedback" option in the app's settings.
